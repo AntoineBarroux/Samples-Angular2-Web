@@ -1,0 +1,29 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7453ABE70C99836A01F5BB164363F4C90D3354C5" : 9223372036854775807,
+    "101315F4C6008F32816F69B09871CA89956743E0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "54CBB672-5EDA-46E4-9C84-6655BF7890D7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7453ABE70C99836A01F5BB164363F4C90D3354C5" : "SampleAngular\/www\/platform\/",
+    "101315F4C6008F32816F69B09871CA89956743E0" : "SampleAngular\/Cobalt\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SampleAngular",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SampleAngular.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cobaltians\/Cobalt-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "101315F4C6008F32816F69B09871CA89956743E0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/cobaltians\/Cobalt-Web-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7453ABE70C99836A01F5BB164363F4C90D3354C5"
+    }
+  ]
+}
