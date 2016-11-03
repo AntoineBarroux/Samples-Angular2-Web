@@ -13,11 +13,11 @@ var router_1 = require('@angular/router');
 var home_component_1 = require('./home.component');
 var push_component_1 = require('./push.component');
 var pushdata_component_1 = require('./pushdata.component');
+var empty_component_1 = require('./empty.component');
 var routes = [
     {
         path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
+        component: empty_component_1.EmptyComponent
     },
     {
         path: 'home',
@@ -37,7 +37,7 @@ var AppRoutingModule = (function () {
     }
     AppRoutingModule = __decorate([
         core_1.NgModule({
-            imports: [router_1.RouterModule.forRoot(routes)],
+            imports: [router_1.RouterModule.forRoot(routes, { useHash: true })],
             exports: [router_1.RouterModule]
         }), 
         __metadata('design:paramtypes', [])

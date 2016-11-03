@@ -10,13 +10,16 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
+var common_1 = require('@angular/common');
 var app_component_1 = require('./app.component');
+var empty_component_1 = require('./empty.component');
 var home_component_1 = require('./home.component');
 var navigation_component_1 = require('./navigation.component');
 var features_component_1 = require('./features.component');
 var push_component_1 = require('./push.component');
 var pushdata_component_1 = require('./pushdata.component');
 var app_routing_module_1 = require('./app-routing.module');
+///<reference path="../node_modules/typings/index.d.ts"/>
 var AppModule = (function () {
     function AppModule() {
     }
@@ -28,6 +31,7 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
+                empty_component_1.EmptyComponent,
                 home_component_1.HomeComponent,
                 navigation_component_1.NavigationComponent,
                 features_component_1.FeaturesComponent,
@@ -35,13 +39,9 @@ var AppModule = (function () {
                 pushdata_component_1.PushdataComponent
             ],
             bootstrap: [
-                app_component_1.AppComponent,
-                home_component_1.HomeComponent,
-                navigation_component_1.NavigationComponent,
-                features_component_1.FeaturesComponent,
-                push_component_1.PushComponent,
-                pushdata_component_1.PushdataComponent
-            ]
+                app_component_1.AppComponent
+            ],
+            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

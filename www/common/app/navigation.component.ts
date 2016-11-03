@@ -16,15 +16,13 @@ export class NavigationComponent {
             .filter(event => event instanceof NavigationStart)
             .subscribe( path => {
                     const url = path["url"];
-
-                    if (url == '/push'){
-                        Cobalt.toast('push');
+                    if (url == '#/push'){
                     }
-                    else if (/push\/[a-z]+\/[0-9]+/.test(url)){
-                        Cobalt.toast('pushdata');
+                    else if (/#\/push\/[a-z]+\/[0-9]+/.test(url)){
+
                     }
                     else{
-                        Cobalt.toast('pop');
+
                     }
             } );
     }

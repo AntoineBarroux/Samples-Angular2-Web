@@ -26,20 +26,27 @@
     <script>
         System.import('app').catch(function(err){ console.error(err); });
     </script>
-    
+
     <script>
         cobalt.init({
-            debug:true,
-            debugInBrowser: true,
-            events:{
-                "onPageShown": function(data, callback){
-                    cobalt.log("onPageShown with data " + data);
+            debug : true,
+            //debugInBrowser : true,
+            events : {
+                "onPageShown" : function( data, callback ){
                 }
             }
         });
+        cobalt.addEventListener('onPageShown', function(data, callback){
+            cobalt.log('test with data ' + JSON.stringify(data));
 
-        cobalt.addEventListener('onPageShown', function( data , callback ){
-            cobalt.log('onpageshown with data : ' + JSON.stringify(data));
+           if (!data){
+               cobalt.log('affichage de #/home');
+               
+           }
+           else{
+                cobalt.log('affichage de ' + data.url);
+               
+           }
         });
 
     </script>

@@ -19,14 +19,11 @@ var NavigationComponent = (function () {
             .filter(function (event) { return event instanceof router_1.NavigationStart; })
             .subscribe(function (path) {
             var url = path["url"];
-            if (url == '/push') {
-                Cobalt.toast('push');
+            if (url == '#/push') {
             }
-            else if (/push\/[a-z]+\/[0-9]+/.test(url)) {
-                Cobalt.toast('pushdata');
+            else if (/#\/push\/[a-z]+\/[0-9]+/.test(url)) {
             }
             else {
-                Cobalt.toast('pop');
             }
         });
     }

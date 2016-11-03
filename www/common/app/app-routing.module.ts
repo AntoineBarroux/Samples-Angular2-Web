@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent }      from './home.component';
 import { PushComponent}       from './push.component';
 import { PushdataComponent}   from './pushdata.component';
+import { EmptyComponent }     from './empty.component';
 
 const routes: Routes = [
     {
         path: '',
-        redirectTo: 'home',
-        pathMatch: 'full'
+        component: EmptyComponent
     },
     {
         path: 'home',
@@ -26,8 +26,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [ RouterModule.forRoot(routes) ],
+    imports: [ RouterModule.forRoot(routes, { useHash: true}) ],
     exports: [ RouterModule ]
 })
 export class AppRoutingModule {
+
 }
