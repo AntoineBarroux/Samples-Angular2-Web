@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, AfterViewInit} from '@angular/core';
 
 
 @Component({
@@ -6,7 +6,20 @@ import { Component } from '@angular/core';
     selector: 'main-app',
     templateUrl: 'app.component.html'
 })
-export class AppComponent {
-    title: String = "Angular Sample";
+export class AppComponent implements AfterViewInit{
+    title: String;
 
+    constructor(){
+        this.title = "Sample Angular";
+    }
+
+    ngAfterViewInit(): void{
+        cobalt.log('onPageShown received by web side');
+        if (!onPageShownData){
+            location.href = '#/home';
+        }
+        else{
+            location.href = onPageShownData.url;
+        }
+    }
 }

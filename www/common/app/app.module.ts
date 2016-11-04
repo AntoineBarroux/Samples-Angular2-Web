@@ -1,4 +1,4 @@
-import { NgModule }           from '@angular/core';
+import {NgModule}           from '@angular/core';
 import { BrowserModule }      from '@angular/platform-browser';
 
 import { LocationStrategy,
@@ -39,4 +39,6 @@ import { AppRoutingModule }   from './app-routing.module';
     providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}]
 })
 
-export class AppModule {}
+export class AppModule{
+
+}

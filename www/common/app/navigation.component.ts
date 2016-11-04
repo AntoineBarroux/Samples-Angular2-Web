@@ -16,12 +16,10 @@ export class NavigationComponent {
             .filter(event => event instanceof NavigationStart)
             .subscribe( path => {
                     const url = path["url"];
-                    if (url == '#/push'){
-                    }
-                    else if (/#\/push\/[a-z]+\/[0-9]+/.test(url)){
-
-                    }
-                    else{
+                    if (url != '/'){
+                        cobalt.log('pushdone');
+                        cobalt.navigate.push({ page : "index.html", data :{ url : url }})
+                        cobalt.log('didpush');
 
                     }
             } );

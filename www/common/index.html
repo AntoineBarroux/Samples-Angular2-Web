@@ -10,12 +10,6 @@
 
     <link rel="stylesheet" href="styles.css">
 
-</head>
-<body>
-
-    <main-app></main-app>
-
-
     <script src="../platform/cobalt.min.js"></script>
     <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
@@ -27,29 +21,24 @@
         System.import('app').catch(function(err){ console.error(err); });
     </script>
 
-    <script>
-        cobalt.init({
-            debug : true,
-            //debugInBrowser : true,
-            events : {
-                "onPageShown" : function( data, callback ){
-                }
+</head>
+<body>
+
+<main-app></main-app>
+<router-outlet></router-outlet>
+
+<script>
+    var onPageShownData;
+    cobalt.init({
+        debug : true,
+        //debugInBrowser : true,
+        events: {
+            "onPageShown": function(data, callback){
+                onPageShownData = data;
+                cobalt.log('received onPageShown with data', data);
             }
-        });
-        cobalt.addEventListener('onPageShown', function(data, callback){
-            cobalt.log('test with data ' + JSON.stringify(data));
-
-           if (!data){
-               cobalt.log('affichage de #/home');
-               
-           }
-           else{
-                cobalt.log('affichage de ' + data.url);
-               
-           }
-        });
-
-    </script>
-
+        }
+    });
+</script>
 </body>
 </html>
