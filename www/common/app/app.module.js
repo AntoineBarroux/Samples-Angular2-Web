@@ -17,8 +17,8 @@ var home_component_1 = require('./home.component');
 var navigation_component_1 = require('./navigation.component');
 var features_component_1 = require('./features.component');
 var push_component_1 = require('./push.component');
-var pushdata_component_1 = require('./pushdata.component');
 var app_routing_module_1 = require('./app-routing.module');
+var cobalt_routing_guard_1 = require('./cobalt-routing.guard');
 ///<reference path="../node_modules/typings/index.d.ts"/>
 var AppModule = (function () {
     function AppModule() {
@@ -35,13 +35,15 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 navigation_component_1.NavigationComponent,
                 features_component_1.FeaturesComponent,
-                push_component_1.PushComponent,
-                pushdata_component_1.PushdataComponent
+                push_component_1.PushComponent
             ],
             bootstrap: [
                 app_component_1.AppComponent
             ],
-            providers: [{ provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy }]
+            providers: [
+                { provide: common_1.LocationStrategy, useClass: common_1.HashLocationStrategy },
+                cobalt_routing_guard_1.CobaltRoutingGuard
+            ]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

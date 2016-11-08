@@ -11,9 +11,9 @@ import { HomeComponent }      from './home.component';
 import { NavigationComponent} from './navigation.component';
 import { FeaturesComponent }  from './features.component';
 import { PushComponent}       from './push.component';
-import { PushdataComponent}   from './pushdata.component';
 
 import { AppRoutingModule }   from './app-routing.module';
+import { CobaltRoutingGuard } from './cobalt-routing.guard';
 
 
 ///<reference path="../node_modules/typings/index.d.ts"/>
@@ -30,13 +30,15 @@ import { AppRoutingModule }   from './app-routing.module';
                         HomeComponent,
                         NavigationComponent,
                         FeaturesComponent,
-                        PushComponent,
-                        PushdataComponent
+                        PushComponent
                     ],
     bootstrap:      [
                         AppComponent
                     ],
-    providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}]
+    providers: [
+                        {provide: LocationStrategy, useClass: HashLocationStrategy},
+                        CobaltRoutingGuard
+                ]
 })
 
 export class AppModule{

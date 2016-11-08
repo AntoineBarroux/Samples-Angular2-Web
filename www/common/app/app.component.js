@@ -11,8 +11,19 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = "Angular Sample";
+        this.title = "Sample Angular";
     }
+    AppComponent.prototype.ngAfterViewInit = function () {
+        cobalt.log('onPageShown received by web side with data', onPageShownData);
+        if (!onPageShownData) {
+            location.href = '#/home';
+            cobalt.log('affichage de home');
+        }
+        else {
+            location.href = onPageShownData.url;
+            cobalt.log('affichage de ' + onPageShownData.url);
+        }
+    };
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { Routes, Router, NavigationStart, Event as NavigationEvent } from '@angular/router';
+import {ActivatedRoute, Router, NavigationEnd, Params} from '@angular/router';
 import 'rxjs/add/operator/filter';
+import {Subscription} from "rxjs/Rx";
+
+
 
 
 @Component({
@@ -8,20 +11,6 @@ import 'rxjs/add/operator/filter';
     selector: 'navigation-section',
     templateUrl: './navigation.component.html'
 })
-export class NavigationComponent {
-    title: String = "Navigation";
+export class NavigationComponent{
 
-    constructor(private router: Router) {
-        this.router.events
-            .filter(event => event instanceof NavigationStart)
-            .subscribe( path => {
-                    const url = path["url"];
-                    if (url != '/'){
-                        cobalt.log('pushdone');
-                        cobalt.navigate.push({ page : "index.html", data :{ url : url }})
-                        cobalt.log('didpush');
-
-                    }
-            } );
-    }
 }

@@ -12,8 +12,8 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var home_component_1 = require('./home.component');
 var push_component_1 = require('./push.component');
-var pushdata_component_1 = require('./pushdata.component');
 var empty_component_1 = require('./empty.component');
+var cobalt_routing_guard_1 = require('./cobalt-routing.guard');
 var routes = [
     {
         path: '',
@@ -29,9 +29,18 @@ var routes = [
     },
     {
         path: 'push/:action/:id',
-        component: pushdata_component_1.PushdataComponent
+        component: push_component_1.PushComponent
     }
 ];
+//This script is in order to add the cobalt router
+routes.forEach(function (route) {
+    if (route.canActivate) {
+        route.canActivate.push(cobalt_routing_guard_1.CobaltRoutingGuard);
+    }
+    else {
+        route.canActivate = [cobalt_routing_guard_1.CobaltRoutingGuard];
+    }
+});
 var AppRoutingModule = (function () {
     function AppRoutingModule() {
     }

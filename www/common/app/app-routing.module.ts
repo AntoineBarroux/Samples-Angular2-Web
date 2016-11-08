@@ -3,8 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { HomeComponent }      from './home.component';
 import { PushComponent}       from './push.component';
-import { PushdataComponent}   from './pushdata.component';
 import { EmptyComponent }     from './empty.component';
+import { CobaltRoutingGuard } from './cobalt-routing.guard';
 
 const routes: Routes = [
     {
@@ -21,9 +21,21 @@ const routes: Routes = [
     },
     {
         path: 'push/:action/:id',
-        component: PushdataComponent
+        component: PushComponent
     }
 ];
+
+
+//This script is in order to add the cobalt router
+routes.forEach(function(route){
+    if (route.canActivate){
+        route.canActivate.push(CobaltRoutingGuard);
+    }
+    else{
+        route.canActivate = [CobaltRoutingGuard];
+    }
+})
+
 
 @NgModule({
     imports: [ RouterModule.forRoot(routes, { useHash: true}) ],

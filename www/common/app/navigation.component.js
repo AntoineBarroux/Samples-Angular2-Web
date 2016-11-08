@@ -9,23 +9,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var router_1 = require('@angular/router');
 require('rxjs/add/operator/filter');
 var NavigationComponent = (function () {
-    function NavigationComponent(router) {
-        this.router = router;
-        this.title = "Navigation";
-        this.router.events
-            .filter(function (event) { return event instanceof router_1.NavigationStart; })
-            .subscribe(function (path) {
-            var url = path["url"];
-            if (url == '#/push') {
-            }
-            else if (/#\/push\/[a-z]+\/[0-9]+/.test(url)) {
-            }
-            else {
-            }
-        });
+    function NavigationComponent() {
     }
     NavigationComponent = __decorate([
         core_1.Component({
@@ -33,7 +19,7 @@ var NavigationComponent = (function () {
             selector: 'navigation-section',
             templateUrl: './navigation.component.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router])
+        __metadata('design:paramtypes', [])
     ], NavigationComponent);
     return NavigationComponent;
 }());
