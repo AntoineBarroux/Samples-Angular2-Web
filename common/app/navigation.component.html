@@ -1,0 +1,18 @@
+<article>
+    <h2>Navigation {{typeNav}}</h2>
+
+    <div>
+        <a [routerLink]="['/push']" [queryParams]="{type: 'push'}">Push</a>
+        <p>
+            Pushing a simple page
+        </p>
+    </div>
+
+    <div>
+        <a routerLink='/push/edit/5' [queryParams]="{type: 'push'}">Push with data</a>
+        <p>
+            Pushing a simple page with data. This data comes from the router's parameters.
+        </p>
+    </div>
+</article>
+
