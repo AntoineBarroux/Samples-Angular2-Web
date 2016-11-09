@@ -13,6 +13,7 @@ var router_1 = require('@angular/router');
 var home_component_1 = require('./home.component');
 var push_component_1 = require('./push.component');
 var empty_component_1 = require('./empty.component');
+var native_bar_component_1 = require('./native-bar.component');
 var cobalt_routing_guard_1 = require('./cobalt-routing.guard');
 var routes = [
     {
@@ -30,6 +31,10 @@ var routes = [
     {
         path: 'push/:action/:id',
         component: push_component_1.PushComponent
+    },
+    {
+        path: 'nativebars',
+        component: native_bar_component_1.NativeBarComponent
     }
 ];
 //This script is in order to add the cobalt router

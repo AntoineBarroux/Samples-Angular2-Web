@@ -11,6 +11,8 @@ export class CobaltRoutingGuard implements CanActivate {
 
         else{
             const typeNav = next.queryParams['type'];
+            const controller = next.queryParams['controller'] ? next.queryParams['controller'] : '';
+            cobalt.log('Controller asked : ' + controller);
 
             var url = '#/';
             var arr = next.url.toString().split(',');
@@ -32,7 +34,7 @@ export class CobaltRoutingGuard implements CanActivate {
 
             switch (typeNav){
                 case 'push':
-                    cobalt.navigate.push({page: 'index.html', data: data});
+                    cobalt.navigate.push({page: 'index.html', controller: controller, data: data});
                     break;
                 case 'pop':
                     cobalt.navigate.pop({page: 'index.html', data: data});

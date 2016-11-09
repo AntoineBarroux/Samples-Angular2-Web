@@ -11,6 +11,7 @@ import { HomeComponent }      from './home.component';
 import { NavigationComponent} from './navigation.component';
 import { FeaturesComponent }  from './features.component';
 import { PushComponent}       from './push.component';
+import { NativeBarComponent } from './native-bar.component';
 
 import { AppRoutingModule }   from './app-routing.module';
 import { CobaltRoutingGuard } from './cobalt-routing.guard';
@@ -30,7 +31,8 @@ import { CobaltRoutingGuard } from './cobalt-routing.guard';
                         HomeComponent,
                         NavigationComponent,
                         FeaturesComponent,
-                        PushComponent
+                        PushComponent,
+                        NativeBarComponent
                     ],
     bootstrap:      [
                         AppComponent

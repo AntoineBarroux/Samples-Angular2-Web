@@ -17,6 +17,7 @@ var home_component_1 = require('./home.component');
 var navigation_component_1 = require('./navigation.component');
 var features_component_1 = require('./features.component');
 var push_component_1 = require('./push.component');
+var native_bar_component_1 = require('./native-bar.component');
 var app_routing_module_1 = require('./app-routing.module');
 var cobalt_routing_guard_1 = require('./cobalt-routing.guard');
 ///<reference path="../node_modules/typings/index.d.ts"/>
@@ -35,7 +36,8 @@ var AppModule = (function () {
                 home_component_1.HomeComponent,
                 navigation_component_1.NavigationComponent,
                 features_component_1.FeaturesComponent,
-                push_component_1.PushComponent
+                push_component_1.PushComponent,
+                native_bar_component_1.NativeBarComponent
             ],
             bootstrap: [
                 app_component_1.AppComponent

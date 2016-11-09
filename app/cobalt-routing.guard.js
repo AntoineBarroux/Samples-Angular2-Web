@@ -10,6 +10,8 @@ var CobaltRoutingGuard = (function () {
         }
         else {
             var typeNav = next.queryParams['type'];
+            var controller = next.queryParams['controller'] ? next.queryParams['controller'] : '';
+            cobalt.log('Controller asked : ' + controller);
             var url = '#/';
             var arr = next.url.toString().split(',');
             for (var i = 0; i < arr.length; i++) {
@@ -26,7 +28,7 @@ var CobaltRoutingGuard = (function () {
             }
             switch (typeNav) {
                 case 'push':
-                    cobalt.navigate.push({ page: 'index.html', data: data });
+                    cobalt.navigate.push({ page: 'index.html', controller: controller, data: data });
                     break;
                 case 'pop':
                     cobalt.navigate.pop({ page: 'index.html', data: data });

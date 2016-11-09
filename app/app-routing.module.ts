@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent }      from './home.component';
 import { PushComponent}       from './push.component';
 import { EmptyComponent }     from './empty.component';
+import { NativeBarComponent } from './native-bar.component';
 import { CobaltRoutingGuard } from './cobalt-routing.guard';
 
 const routes: Routes = [
@@ -22,6 +23,10 @@ const routes: Routes = [
     {
         path: 'push/:action/:id',
         component: PushComponent
+    },
+    {
+        path: 'nativebars',
+        component: NativeBarComponent
     }
 ];
 
