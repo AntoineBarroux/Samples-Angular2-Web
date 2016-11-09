@@ -12,6 +12,17 @@ var core_1 = require('@angular/core');
 var FeaturesComponent = (function () {
     function FeaturesComponent() {
     }
+    FeaturesComponent.prototype.nativeCalcul = function () {
+        var MAX = 10;
+        var data = {
+            nb1: (Math.floor(Math.random() * MAX) + 1),
+            nb2: (Math.floor(Math.random() * MAX) + 1)
+        };
+        cobalt.log('Nb1=' + data.nb1 + ', nb2=' + data.nb2);
+        cobalt.sendEvent('nativeCalcul', data, function (result) {
+            cobalt.toast(data.nb1 + ' + ' + data.nb2 + ', native answered : ' + JSON.stringify(result.result));
+        });
+    };
     FeaturesComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

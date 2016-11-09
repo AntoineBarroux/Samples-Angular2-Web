@@ -9,32 +9,6 @@ body{
     font-size: 1em;
 }
 
-header {
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-}
-
-header > div > img,
-header > div > h1{
-    display: inline-block;
-    vertical-align: middle;
-}
-
-header > div > img{
-    height: 30px;
-    width: auto;
-    margin-right: 10px;
-}
-
-header > div > h1{
-    text-transform: uppercase;
-    font-family: sans-serif;
-    color: rgb(0, 173, 236);
-    margin: 0;
-    font-size: 1.5em;
-}
-
 section{
     display: flex;
     flex-direction: row;
@@ -79,7 +53,7 @@ article > div{
     margin-bottom: 1%;
 }
 
-article > div > a{
+article > div > a, button{
     text-decoration: none;
     background-color: rgb(0, 173, 236);
     display: block;
@@ -87,6 +61,8 @@ article > div > a{
     color: #FFF;
     padding: 10px 0;
     width: 90%;
+    border: none;
+    font-size: 1em;
 }
 
 article > div > p{

@@ -11,7 +11,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = "Sample Angular";
     }
     AppComponent.prototype.ngAfterViewInit = function () {
         cobalt.log('onPageShown received by web side with data', onPageShownData);

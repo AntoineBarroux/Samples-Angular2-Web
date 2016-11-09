@@ -2,14 +2,14 @@
     <h2>Features</h2>
 
     <div>
-        <a href="javascript:;">Native calcul</a>
+        <a href="javascript:;" (click)="nativeCalcul()">Native calcul</a>
         <p>
             Sending an addition to the native side which will send back the result to the web side.
         </p>
     </div>
 
     <div>
-        <a href="javascript:;">Nativebars</a>
+        <a [routerLink]="['/nativebars']" [queryParams]="{type: 'push'}">Nativebars</a>
         <p>
             Pushing a view with active native bars.
         </p>

@@ -6,7 +6,6 @@ import {Component, AfterViewInit} from '@angular/core';
     templateUrl: 'app.component.html'
 })
 export class AppComponent implements AfterViewInit{
-    title: String = "Sample Angular";
 
     ngAfterViewInit(): void{
         cobalt.log('onPageShown received by web side with data', onPageShownData);
