@@ -37,13 +37,13 @@ export class CobaltRoutingGuard implements CanActivate {
                     cobalt.navigate.push({page: 'index.html', controller: controller, data: data});
                     break;
                 case 'pop':
-                    cobalt.navigate.pop({page: 'index.html', data: data});
+                    cobalt.navigate.pop({page: 'index.html', controller: controller, data: data});
                     break;
                 case 'modal':
-                    cobalt.navigate.modal({page: 'index.html', data: data});
+                    cobalt.navigate.modal({page: 'index.html', controller: controller, data: data});
                     break;
                 case 'replace':
-                    cobalt.navigate.replace({page: 'index.html', data: data});
+                    cobalt.navigate.replace({page: 'index.html', controller: controller, data: data});
                     break;
                 default:
                     cobalt.log('Pas de navigation native');
