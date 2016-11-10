@@ -18,6 +18,7 @@ import { CobaltRoutingGuard } from './cobalt-routing.guard';
 
 
 ///<reference path="../node_modules/typings/index.d.ts"/>
+///<reference path="../cobalt.d.ts"/>
 
 
 @NgModule({
